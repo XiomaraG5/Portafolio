@@ -1,7 +1,7 @@
 import React from 'react'
 import './Styles.formulario.css'
 
-const Formulario = () => {
+const Formulario = () => { 
 
     const handleSubmit = async (event) => {
         event.preventDefault(); // Evita la recarga de la página
