@@ -1,0 +1,118 @@
+
+
+
+.main {
+  width: 100vw;
+  position: relative;
+  min-height: 100vh;
+  background-image: url("/images/backgrounddetails.png");
+  background-size: cover;
+  background-repeat: repeat;
+  padding-top: 6%;
+  font-family: 'Afacad', sans-serif;
+  overflow: hidden;
+  z-index: 2;
+}
+
+.svg{
+    transform: rotate(-150deg);
+    flex-shrink: 0;
+    position: absolute;
+    z-index: -1;
+    top:-5%;
+    left: -16%;
+    z-index: -1;
+  }
+
+.svgBlue{
+  fill: var(--Portfolio-dark, #2A2C41);
+  width: 241.366px;
+  height: 323.961px;
+  transform: rotate(85deg);
+  flex-shrink: 0;
+  position: absolute;
+    z-index: -1;
+    top:-5%;
+    right:  -6%;
+    z-index: -1;
+}
+
+.Content-certificados{
+  max-width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 2%;
+  margin-top: 5%;
+}
+/* .Content-certificado .Content-certificados_card:hover{
+  background-color: var(--Portfolio-dark, #d66969);
+} */
+.Content-certificados div{
+  cursor: pointer;
+  width: 420px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2%;
+  border-radius: 3%;
+  background-color: var(--cards-color, #F8F8F8);
+  box-shadow: 1px 4px 4px 0px var(--Portfolio-dark, #d66969);
+  color: var(--Portfolio-Contraste, #FF724C);
+}
+ /* #card1, #card2,#card3,#card5, #card6
+ ,#card7{ 
+  cursor: pointer;
+  background-color: var(--cards-color, #F8F8F8);
+} */
+.Content-certificados div:hover{
+  
+  cursor: pointer;
+  background-color: var(--Portfolio-dark, #2A2C41);
+}
+/* #card2:hover{
+  
+  cursor: pointer;
+  background-color: var(--Portfolio-dark, #d66969);
+}
+#card3:hover{
+  
+  cursor: pointer;
+  background-color: var(--Portfolio-dark, #d66969);
+}
+#card5:hover{
+  
+  cursor: pointer;
+  background-color: var(--Portfolio-dark, #d66969);
+}
+#card6:hover{
+  
+  cursor: pointer;
+  background-color: var(--Portfolio-dark, #d66969);
+}
+#card7:hover{
+  
+  cursor: pointer;
+  background-color: var(--Portfolio-dark, #d66969);
+} */
+
+
+.Content-certificados_card img{
+  width: 340px;
+  height: 320px;
+  object-fit:fill;
+  border-radius: 2%;
+  margin-top: 2%;
+}
+.subtitle{
+    font-size: 22px;
+    margin-left: 0px;
+    margin-top: 3%;
+    color: var(--Portfolio-Contraste, #FF724C);
+}
+.Content-certificados div:hover .subtitle{
+  color: var(--titles, #FDBF50);
+}

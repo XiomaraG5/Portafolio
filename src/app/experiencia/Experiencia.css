@@ -1,0 +1,138 @@
+
+.main {
+    width: 100vw;
+    position: relative;
+    min-height: 100vh;
+    background-image: url("/images/backgrounddetails.png");
+    background-size: cover;
+    background-repeat: repeat-y;
+    padding-top: 6%;
+    font-family: 'Afacad', sans-serif;
+    overflow: hidden;
+    z-index: -2;
+}
+
+.main::-webkit-scrollbar{
+    border: none;
+}
+
+.BigShape{
+    fill: var(--titles, #FDBF50);
+    width: 514.017px;
+    height: 491.543px;
+    transform: rotate(-15deg);
+    flex-shrink: 0;
+    position: absolute;
+    top:-15%;
+    right: -5%;
+    z-index: -1;
+}
+
+.darkSmallShape{
+    fill: var(--Portfolio-dark, #2A2C41);
+    width: 241.366px;
+    height: 323.961px;
+    transform: rotate(13.787deg);
+    flex-shrink: 0;
+    position: absolute;
+    top:-5%;
+    left: -5%;
+    z-index: -1;
+}
+
+.title{
+    text-align: left;
+    margin-left: 5%;
+    text-shadow: 0px 4px 4px #222334;
+}
+.subtitle{
+    margin-left: 10%;
+    margin-top: 2%;
+}
+
+ul{
+    width: 80%;
+    margin: auto;
+    margin-top: 2%;
+}
+
+ul li{
+    text-align: justify;
+    font-size: 20px;
+    margin-top: 1.5%;
+}
+ul li p b, .HiloApp_Dash_b{
+    font-family: 'Salsa', cursive;
+    color: var(--Portfolio-shadow-dark);
+    font-size: 18px;
+}
+
+ul li p:last-child{
+    margin-top: 0.5%;
+}
+
+.p1{
+    color: var(--Portfolio-shadow-dark, #727272);
+    text-align: justify;
+    font-size: 22px;
+    font-style: normal;
+    z-index: 2000;
+    width: 80%;
+    margin: auto;
+    margin-top: 5%;
+}
+.p2{
+    margin-top: 3%;
+}
+
+.hiloAppTitle{
+    margin-top: 7%;
+    font-size: 30px;
+    text-shadow: 0px 2px 2px #2A2C41;
+}
+.HiloApp_Dash{
+    width: 90%;
+   display: flex;
+   justify-content: center;
+   flex-direction: column;
+}
+.HiloApp_Dash img{
+    width: 80%;
+    margin: auto;
+    object-fit:fill;
+    margin-bottom: 2%;
+}
+.HiloApp_Dash_content{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2%;
+    justify-content: center;
+    align-items: center;
+}
+.user{
+    width: 90%;
+   display: flex;
+   justify-content: center;
+   flex-direction: column;
+   margin: auto;
+}
+.user_content{
+    display: flex;
+   justify-content: center;
+   align-items: center;
+}
+.user .apps{
+    width: 200px;
+    height: auto;
+}
+
+.HiloApp_Dash_content_card{
+    width: 47%;
+    margin-top: 1.5%;
+    border-bottom: 2px solid var(--titles);
+}
+.HiloApp_Dash_content_card{
+    text-align: justify;
+    font-size: 20px;
+    margin-top: 1.5%;
+}
