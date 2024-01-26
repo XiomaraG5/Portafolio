@@ -1,5 +1,16 @@
 
-.main {
+.mainDash {
+    width: 100vw;
+    position: relative;
+    min-height: 100vh;
+    background-image: url("/images/backgrounddetails.png");
+    background-size: cover;
+    background-repeat: repeat-y;
+    padding-top: 6%;
+    font-family: 'Afacad', sans-serif;
+    overflow: hidden;
+}
+/* .main {
     width: 100vw;
     position: relative;
     min-height: 100vh;
@@ -10,7 +21,7 @@
     font-family: 'Afacad', sans-serif;
     overflow: hidden;
     z-index: -2;
-}
+} */
 
 .main::-webkit-scrollbar{
     border: none;
@@ -23,7 +34,7 @@
     transform: rotate(-15deg);
     flex-shrink: 0;
     position: absolute;
-    top:-15%;
+    top:-5%;
     right: -5%;
     z-index: -1;
 }
@@ -45,8 +56,8 @@
     margin-left: 5%;
     text-shadow: 0px 4px 4px #222334;
 }
-.subtitle{
-    margin-left: 10%;
+.subExp{
+    padding-left: 8%;
     margin-top: 2%;
 }
 

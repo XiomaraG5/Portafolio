@@ -1,6 +1,9 @@
+"use server"
 const nodemailer = require('nodemailer');
 
-const transporter = nodemailer.createTransport({
+export default async function handler(req, res) {
+  
+  const transporter = nodemailer.createTransport({
     host:'smtp.gmail.com',
     port: 587,
     service: process.env.EMAIL_SERVICE,
@@ -9,11 +12,17 @@ const transporter = nodemailer.createTransport({
         pass: process.env.EMAIL_PASS
     }
 });
+  console.log('====================================');
+  console.log(req, res);
+  console.log('====================================');
 
-export default async function handler(req, res) {
+
     if (req.method === 'POST') {
       // Aquí procesas la solicitud POST
       const { name, email, message } = req.body;
+      console.log('====================================');
+      console.log(req.body);
+      console.log('====================================');
   
       // Aquí podrías configurar Nodemailer con los datos recibidos
       // y enviar un correo electrónico.
@@ -48,7 +57,13 @@ export default async function handler(req, res) {
             }else{
                 res.status(404).end(`Error: invalid email`);
             }
-  
+            transporter.verify(function (error, success) {
+              if (error) {
+                console.log(error);
+              } else {
+                console.log("Server is ready to take our messages");
+              }
+            });
   
       
     } else {

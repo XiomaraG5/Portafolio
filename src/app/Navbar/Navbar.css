@@ -16,7 +16,7 @@
 .Nav h1 a{
     color:var(--titles,#FDBF50);
     text-decoration: none;
-    font-size: 30px;
+    font-size: 25px;
    
 }
 .Nav div{

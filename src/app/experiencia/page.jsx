@@ -1,15 +1,25 @@
 import React from 'react'
 import "./Experiencia.css"
 import Formulario from '@/contact/Formulario'
+import Carousel from '../../Carousel/Carousel'
 const Experiencia = () => {
+
+  const dashImage =[
+      "./Dashboard/d1.png",
+      "./Dashboard/d2.png",
+      "./Dashboard/d3.png",
+      "./Dashboard/d4.png",
+      "./Dashboard/d5.png"
+  ]
   return (
-    <main className="main">
-      <svg className='darkSmallShape' xmlns="http://www.w3.org/2000/svg" width="203" height="212" viewBox="0 0 203 212" fill="none">
-        <path d="M55.697 27.8114C90.7171 5.67692 88.5074 -105.903 157.996 -105.613C200.655 -105.435 218.601 132.224 186.687 175.182C130.316 251.06 -21.2838 197.101 -36.1295 103.747C-44.5342 50.8964 15.0521 53.501 55.697 27.8114Z" fill="#2A2C41"/>
-      </svg>
-      <svg className='BigShape' xmlns="http://www.w3.org/2000/svg" width="409" height="503" viewBox="0 0 409 503" fill="none">
-        <path d="M77.0293 283.036C103.158 211.533 -38.0563 108.693 68.4048 8.82331C133.762 -52.4871 454.754 147.477 459.092 234.289C466.755 387.631 168.618 554.84 30.6259 487.53C-47.4964 449.423 46.704 366.023 77.0293 283.036Z" fill="#FDBF50"/>
-      </svg>
+    <main className="mainDash">
+     
+        <svg className='darkSmallShape' xmlns="http://www.w3.org/2000/svg" width="203" height="212" viewBox="0 0 203 212" fill="none">
+          <path d="M55.697 27.8114C90.7171 5.67692 88.5074 -105.903 157.996 -105.613C200.655 -105.435 218.601 132.224 186.687 175.182C130.316 251.06 -21.2838 197.101 -36.1295 103.747C-44.5342 50.8964 15.0521 53.501 55.697 27.8114Z" fill="#2A2C41"/>
+        </svg>
+        <svg className='BigShape' xmlns="http://www.w3.org/2000/svg" width="409" height="503" viewBox="0 0 409 503" fill="none">
+          <path d="M77.0293 283.036C103.158 211.533 -38.0563 108.693 68.4048 8.82331C133.762 -52.4871 454.754 147.477 459.092 234.289C466.755 387.631 168.618 554.84 30.6259 487.53C-47.4964 449.423 46.704 366.023 77.0293 283.036Z" fill="#FDBF50"/>
+        </svg>
 
         <h1 className='title'>Mi experiencia </h1>
         <p className='p1'>
@@ -20,7 +30,7 @@ const Experiencia = () => {
           creación de interfaces intuitivas y diseñando con datos en mente.
         </p>
 
-        <h2 className='subtitle'>Etapas de mi viaje: </h2>
+        <h2 className='subtitle subExp'>Etapas de mi viaje: </h2>
         
         <ul>
             <li>
@@ -87,10 +97,10 @@ const Experiencia = () => {
           de puntos, todo integrado en una plataforma fácil de usar. Además, cuenta con un dashboard analítico para 
           visualizar datos importantes, ayudando en la toma de decisiones efectiva.
         </p>
-        <h3 className='subtitle'> Manejador Wep </h3>
-
+        <h3 className='subtitle subExp'> Manejador Wep </h3>
+        <Carousel images={dashImage}/>
         <div className='p1 HiloApp_Dash' >
-            <img src='/images/manejadorWeb.png'/>
+            
             <div className='HiloApp_Dash_content'>
               <div  className='HiloApp_Dash_content_card'>
                 <b className='HiloApp_Dash_b'>◗ Análisis de KPIS</b> 
@@ -132,7 +142,7 @@ const Experiencia = () => {
             </div>
         </div>
 
-        <h3 className='subtitle'> Hilo usuarios </h3>
+        <h3 className='subtitle subExp'> Hilo usuarios </h3>
         <div className=' user HiloApp_Dash'>
             <img className='apps' width={"200px"} src='/images/appUsuarios.png'/>
             <div className='HiloApp_Dash_content user_content'>
@@ -189,7 +199,7 @@ const Experiencia = () => {
             </div>
         </div>
 
-        <h3 className='subtitle'> Hilo Experts </h3>
+        <h3 className='subtitle subExp'> Hilo Experts </h3>
         <div className='user HiloApp_Dash'>
           <img className='apps'  src='/images/appLogisticos.png'/>
           <div className='HiloApp_Dash_content user_content'>
