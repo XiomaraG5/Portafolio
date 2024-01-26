@@ -4,41 +4,29 @@ import './Styles.formulario.css'
 
 const Formulario = () => { 
 
-    const handleSubmit = async (event) => {
-      console.log('====================================');
-      console.log(typeof  event.target.name.value,typeof  event.target.email.value,typeof  event.target.message.value);
-      console.log('====================================');
-        event.preventDefault(); // Evita la recarga de la página
-        const tt = {
-          // Asume que tienes un estado o refs para cada campo
-          name: event.target.name.value,
-          email: event.target.email.value,
-          message: event.target.message.value,
-        };
-      
-        // Opción con fetch para enviar los datos
-        const response = await fetch('/api/contact', {
-          method: 'POST',
-          headers: {
-            'Content-Type': "application/json; charset=UTF-8",
-          },
-          body: JSON.stringify({
-            // Asume que tienes un estado o refs para cada campo
-            name: event.target.name.value.toString(),
-            email: event.target.email.value.toString(),
-            message: event.target.message.value.toString(),
-          }),
-        });
-        // const data = await response.json(); // o maneja la respuesta como prefieras
-      
-        if (response.ok) {
-          // Maneja el caso de éxito
-          console.log('Mensaje enviado:', response);
-        } else {
-          // Maneja los errores
-          console.error('Error al enviar el mensaje:', response);
-        }
-      };
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+  
+    const 
+      name= event.target.name.value,
+      email= event.target.email.value,
+      message= event.target.message.value
+    
+  
+    const response = await fetch('/api/contact', {
+      method: 'POST',
+      body: JSON.stringify({name,email,message}),
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    });
+  
+    if (response.ok) {
+      console.log('Mensaje enviado:');
+    } else {
+      console.error('Error al enviar el mensaje:');
+    }
+  };
       
   return (
     <div className='contect_form'>
